@@ -1,0 +1,11 @@
+Header:
+  - label: Home
+    url: /
+    authReq: false
+  - label: Contact Us
+    url: /contact
+    authReq: false
+  - label: About
+    url: /about
+    authReq: true
+ 

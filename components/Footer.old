@@ -1,0 +1,13 @@
+<template>
+  <footer class="mt-auto pt-3 pb-3 mb-auto flex flex-wrap bg-neutral-dark text-neutral-light justify-between">
+    <div class="md:flex md:gap-2 md:text-center">
+      <p><a href="javascript:Cookiebot.renew()">Cookie Settings</a></p>
+      <p><a href="/privacy">Privacy Policy</a></p>
+    </div>
+    <div>
+      <p class="pt-8 md:p-0">
+        Copyright &copy; {{ new Date().getFullYear() }} Alternative Reality Group. All rights reserved.
+      </p>
+    </div>
+</footer>
+</template>
