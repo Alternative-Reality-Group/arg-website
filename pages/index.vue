@@ -59,9 +59,9 @@
             <p class="eyebrow !text-muted-dark">How we work</p>
             <h2 class="text-4xl font-bold sm:text-5xl">We work as partners</h2>
             <p class="text-lg text-muted-dark">
-              Our preferred model is a venture partnership: we take part of our compensation as equity or a share of
-              revenue, so we only do well when the product does. If that isn't the right fit, we also offer training
-              and fixed-scope projects.
+              Our preferred model is a revenue partnership. Rather than billing up front, we're paid from a share of
+              your sales, so we only do well when the product does. We take no ownership in your company. If that
+              isn't the right fit, we also offer training and fixed-scope projects.
             </p>
             <a href="#contact" class="btn mt-4 self-start bg-violet text-white hover:bg-violet-dim">Discuss your product</a>
           </div>
@@ -200,8 +200,8 @@ const services = [
 
 const models = [
   {
-    name: "Venture partnership",
-    text: "Strategy, build and launch support over the long term, paid partly in equity or a share of revenue.",
+    name: "Revenue partnership",
+    text: "Strategy, build and launch support, repaid from a share of sales. Once our fees are covered, the share drops to a small royalty. You keep full ownership.",
   },
   {
     name: "Training",
