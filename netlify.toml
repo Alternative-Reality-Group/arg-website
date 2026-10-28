@@ -2,5 +2,5 @@
 ## https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  functions = "netlify/functions" # where Netlify Functions live
-  publish = "dist" # where the built project lives
+  command = "npm run generate" # static build; writes dist/
+  publish = "dist"
