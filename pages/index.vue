@@ -98,6 +98,13 @@
         <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[1fr_2fr] md:py-28">
           <div class="flex flex-col gap-4">
             <p class="eyebrow">About</p>
+            <img
+              src="/img/jim-kass.webp"
+              alt="Jim Kass"
+              width="640"
+              height="640"
+              loading="lazy"
+              class="h-40 w-40 rounded-lg object-cover sm:h-48 sm:w-48" />
             <h2 class="text-4xl font-bold sm:text-5xl">Jim Kass</h2>
             <p class="font-mono text-sm text-muted">Founder</p>
           </div>
