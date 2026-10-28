@@ -59,7 +59,7 @@
             <p class="eyebrow !text-muted-dark">How we work</p>
             <h2 class="text-4xl font-bold sm:text-5xl">We work as partners</h2>
             <p class="text-lg text-muted-dark">
-              Our preferred model is a revenue partnership. Rather than billing up front, we're paid from a share of
+              Our preferred model is revenue participation. Rather than billing up front, we're paid from a share of
               your sales, so we only do well when the product does. We take no ownership in your company. If that
               isn't the right fit, we also offer training and fixed-scope projects.
             </p>
@@ -200,7 +200,7 @@ const services = [
 
 const models = [
   {
-    name: "Revenue partnership",
+    name: "Revenue participation",
     text: "Strategy, build and launch support, repaid from a share of sales. Once our fees are covered, the share drops to a small royalty. You keep full ownership.",
   },
   {
