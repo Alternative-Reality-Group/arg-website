@@ -1,6 +1,6 @@
 <script setup>
 const description =
-  "Alternative Reality Group builds and runs its own software products, including kidscancode and Bloginator, and takes on a few outside builds each year. Based in Los Angeles."
+  "Alternative Reality Group is an AI-native product company in Los Angeles. We help founders turn AI-built prototypes into real products, with product strategy, architecture, security, analytics, brand and go-to-market, and we build our own products the same way."
 
 useHead({
   htmlAttrs: { lang: "en-US" },
@@ -13,7 +13,7 @@ useHead({
 })
 
 useSeoMeta({
-  title: "Alternative Reality Group: software products, built and shipped",
+  title: "Alternative Reality Group: AI-native product development",
   description,
   ogTitle: "Alternative Reality Group",
   ogDescription: description,

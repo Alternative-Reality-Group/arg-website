@@ -3,9 +3,9 @@
     <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28">
       <div class="flex flex-col gap-6">
         <p class="eyebrow !text-muted-dark">Contact</p>
-        <h2 class="text-4xl font-bold sm:text-5xl">Tell us what you're building.</h2>
+        <h2 class="text-4xl font-bold sm:text-5xl">Tell us about your product.</h2>
         <p class="max-w-md text-lg text-muted-dark">
-          A few sentences is plenty. You'll get a straight answer on whether it's a fit, usually within a day.
+          Where it stands, what's working and what's in the way. We reply to every enquiry within one business day.
         </p>
         <dl class="mt-4 flex flex-col gap-4">
           <div>
@@ -25,7 +25,7 @@
 
       <div class="rounded-lg border border-line-dark bg-white/[0.03] p-6 sm:p-8">
         <p v-if="state === 'sent'" role="status" class="text-2xl font-display">
-          Thanks. Your message is in, and you'll hear back soon.
+          Thank you. We've received your message and will reply within one business day.
         </p>
         <form v-else name="contact-form" method="post" class="flex flex-col gap-5" @submit.prevent="submit">
           <input type="hidden" name="form-name" value="contact-form" />
@@ -69,8 +69,8 @@
 const fields = [
   { name: "name", label: "Name", type: "text", autocomplete: "name", required: true },
   { name: "email", label: "Email", type: "email", autocomplete: "email", required: true },
-  { name: "company", label: "Company or project", type: "text", autocomplete: "organization", required: false },
-  { name: "message", label: "What are you building?", multiline: true, required: true, placeholder: "The idea, where it's at, and what you need." },
+  { name: "company", label: "Company or product", type: "text", autocomplete: "organization", required: false },
+  { name: "message", label: "About your product", multiline: true, required: true, placeholder: "What it does, how it was built so far, and what you need next." },
 ]
 
 const state = ref("idle")

@@ -8,7 +8,12 @@
         </span>
       </NuxtLink>
       <nav aria-label="Main" class="flex items-center gap-5 text-[15px] sm:gap-8">
-        <a v-for="link in links" :key="link.href" :href="link.href" class="text-ink/80 transition-colors hover:text-ink">
+        <a
+          v-for="link in links"
+          :key="link.href"
+          :href="link.href"
+          class="text-ink/80 transition-colors hover:text-ink"
+          :class="{ 'hidden md:inline': link.desktopOnly }">
           {{ link.label }}
         </a>
       </nav>
@@ -17,9 +22,11 @@
 </template>
 
 <script setup>
+// Four links don't fit beside the logo on small screens, so About only appears from the md breakpoint up.
 const links = [
-  { label: "Products", href: "/#products" },
-  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "About", href: "/#about", desktopOnly: true },
   { label: "Contact", href: "/#contact" },
 ]
 </script>

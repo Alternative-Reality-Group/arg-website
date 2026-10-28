@@ -1,6 +1,6 @@
 # alternativereality.com
 
-The website for [Alternative Reality Group](https://alternativereality.com), a software company in Los Angeles that builds and runs its own products.
+The website for [Alternative Reality Group](https://alternativereality.com), an AI-native product company in Los Angeles that helps founders turn AI-built prototypes into real products.
 
 Built with [Nuxt 3](https://nuxt.com/) and [Tailwind CSS](https://tailwindcss.com/), generated as a static site and hosted on [Netlify](https://www.netlify.com/).
 
