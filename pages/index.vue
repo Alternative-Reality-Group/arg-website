@@ -103,17 +103,16 @@
           </div>
           <div class="flex flex-col gap-5 text-lg text-ink/80">
             <p>
-              Jim is a technical and creative product leader, with decades of experience across entertainment and
-              technology.
+              Jim has spent 30 years in technology and entertainment. For more than a decade at Sony PlayStation he led
+              product for the tools game developers and publishers use to work with PlayStation, including bringing
+              generative AI into developer support.
             </p>
             <p>
-              Alternative Reality started as Alternative Reality Productions and Alternative Reality Consulting.
-              Alternative Reality Group brings that work together: it's where Jim designs, builds and launches his
-              own products, and the home they grow out of.
+              Before that he managed development at a motion picture digital asset management company, consulted on
+              digital projects, and produced independent films. His first startup job was in 1995.
             </p>
             <p>
-              The name is the job. Every product starts as an idea that only exists on a screen, and the work is
-              making it real enough for people to use.
+              Since 2024 he has run Alternative Reality Group, designing products and building them with AI coding agents.
             </p>
           </div>
         </div>
