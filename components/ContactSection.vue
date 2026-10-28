@@ -1,220 +1,98 @@
 <template>
-  <section id="contact" class="py-20 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12">
-        <div>
-          <h2 class="text-4xl font-bold mb-6">
-            Let's talk about your project
-          </h2>
-          <p class="text-xl text-gray-300 mb-8">
-            Tell me what you're trying to build or where you're stuck. I'll give
-            you a direct read on whether it's a fit, and what the next step
-            should be.
+  <section id="contact" class="bg-night text-paper">
+    <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28">
+      <div class="flex flex-col gap-6">
+        <p class="eyebrow !text-muted-dark">Contact</p>
+        <h2 class="text-4xl font-bold sm:text-5xl">Tell us what you're building.</h2>
+        <p class="max-w-md text-lg text-muted-dark">
+          A few sentences is plenty. You'll get a straight answer on whether it's a fit, usually within a day.
+        </p>
+        <dl class="mt-4 flex flex-col gap-4">
+          <div>
+            <dt class="font-mono text-xs uppercase tracking-widest text-muted-dark">Email</dt>
+            <dd><a href="mailto:contact@alternativereality.com" class="text-lg underline decoration-violet decoration-2 underline-offset-4 hover:text-violet-light">contact@alternativereality.com</a></dd>
+          </div>
+          <div>
+            <dt class="font-mono text-xs uppercase tracking-widest text-muted-dark">Phone</dt>
+            <dd><a href="tel:+18189002989" class="text-lg hover:text-violet-light">(818) 900-2989</a></dd>
+          </div>
+          <div>
+            <dt class="font-mono text-xs uppercase tracking-widest text-muted-dark">Based in</dt>
+            <dd class="text-lg">Woodland Hills, Los Angeles</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="rounded-lg border border-line-dark bg-white/[0.03] p-6 sm:p-8">
+        <p v-if="state === 'sent'" role="status" class="text-2xl font-display">
+          Thanks. Your message is in, and you'll hear back soon.
+        </p>
+        <form v-else name="contact-form" method="post" class="flex flex-col gap-5" @submit.prevent="submit">
+          <input type="hidden" name="form-name" value="contact-form" />
+          <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+          <div v-for="field in fields" :key="field.name" class="flex flex-col gap-2">
+            <label :for="`f-${field.name}`" class="text-sm font-medium">
+              {{ field.label }} <span v-if="!field.required" class="text-muted-dark">(optional)</span>
+            </label>
+            <textarea
+              v-if="field.multiline"
+              :id="`f-${field.name}`"
+              :name="field.name"
+              rows="5"
+              :required="field.required"
+              class="rounded-md border border-line-dark bg-night px-3 py-3 text-paper placeholder:text-muted-dark focus:border-violet focus:outline-none"
+              :placeholder="field.placeholder"></textarea>
+            <input
+              v-else
+              :id="`f-${field.name}`"
+              :name="field.name"
+              :type="field.type"
+              :autocomplete="field.autocomplete"
+              :required="field.required"
+              class="min-h-[44px] rounded-md border border-line-dark bg-night px-3 text-paper placeholder:text-muted-dark focus:border-violet focus:outline-none"
+              :placeholder="field.placeholder" />
+          </div>
+          <p v-if="state === 'error'" role="alert" class="text-red-300">
+            Something went wrong sending that. Please try again, or email contact@alternativereality.com.
           </p>
-
-          <div class="space-y-6">
-            <div
-              v-for="(contact, index) in contactInfo"
-              :key="index"
-              class="flex items-start space-x-4">
-              <div
-                :class="[
-                  'w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0',
-                  contact.bgColor,
-                ]">
-                <Icon :name="contact.icon" class="h-5 w-5" />
-              </div>
-              <div>
-                <h4 class="font-semibold mb-1">
-                  {{ contact.title }}
-                </h4>
-                <template v-if="contact.type === 'phone'">
-                  <a
-                    :href="`tel:${contact.value.replace(/[^+\d]/g, '')}`"
-                    class="text-blue-300 underline hover:text-white transition-colors">
-                    {{ contact.value }}
-                  </a>
-                </template>
-                <template v-else>
-                  <p class="text-gray-300">{{ contact.value }}</p>
-                </template>
-                <p v-if="contact.subtitle" class="text-gray-400 text-sm">
-                  {{ contact.subtitle }}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-gray-800 p-8 rounded-xl">
-          <div id="contact-form-error" class="hidden">
-            <h1 class="text-3xl text-red-400">
-              Sorry, something went wrong. Please try again or email me directly.
-            </h1>
-          </div>
-          <div id="contact-form-success" class="hidden">
-            <h1 class="text-3xl text-green-400">
-              Thank you for your message. I'll respond within one business day.
-            </h1>
-          </div>
-          <h3 id="contact-form-heading" class="text-xl font-bold mb-6">
-            Send a message
-          </h3>
-
-          <form
-            id="contact-form"
-            method="post"
-            name="contact-form"
-            class="space-y-6"
-            @submit.prevent="handleSubmit">
-            <input type="hidden" name="form-name" value="contact-form" />
-
-            <div>
-              <label for="name" class="block text-sm font-medium mb-2"
-                >Name</label
-              >
-              <input
-                v-model="form.name"
-                type="text"
-                id="name"
-                name="name"
-                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="Your name"
-                required />
-            </div>
-
-            <div hidden>
-              <label>Don’t fill this out: <input name="bot-field" /></label>
-            </div>
-
-            <div>
-              <label for="email" class="block text-sm font-medium mb-2"
-                >Email</label
-              >
-              <input
-                v-model="form.email"
-                type="email"
-                id="email"
-                name="email"
-                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="you@company.com"
-                required />
-            </div>
-
-            <div>
-              <label for="company" class="block text-sm font-medium mb-2"
-                >Company</label
-              >
-              <input
-                v-model="form.company"
-                type="text"
-                id="company"
-                name="company"
-                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="Your company"
-                required />
-            </div>
-
-            <div>
-              <label for="message" class="block text-sm font-medium mb-2"
-                >Project brief</label
-              >
-              <textarea
-                v-model="form.message"
-                id="message"
-                rows="4"
-                name="message"
-                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="What are you building? What's the bottleneck?"
-                required></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-500 transition-colors font-medium">
-              Send Message
-            </button>
-          </form>
-        </div>
+          <button type="submit" class="btn mt-2 bg-violet text-white hover:bg-violet-dim disabled:opacity-60" :disabled="state === 'sending'">
+            {{ state === "sending" ? "Sending…" : "Send message" }}
+          </button>
+        </form>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-const form = ref({
-  name: "",
-  email: "",
-  company: "",
-  message: "",
-})
-
-const contactInfo = [
-  {
-    icon: "lucide:mail",
-    title: "Email",
-    value: "contact@alternativereality.com",
-    bgColor: "bg-blue-600",
-    type: "email",
-  },
-  {
-    icon: "lucide:phone",
-    title: "Phone",
-    value: "+1 (818) 900-2989",
-    bgColor: "bg-green-600",
-    type: "phone",
-  },
-  {
-    icon: "lucide:map-pin",
-    title: "Location",
-    value: "Woodland Hills, CA",
-    subtitle: "Available for remote consulting worldwide",
-    bgColor: "bg-purple-600",
-    type: "location",
-  },
+// Field names must match public/post-form.html, which Netlify uses to detect the form.
+const fields = [
+  { name: "name", label: "Name", type: "text", autocomplete: "name", required: true },
+  { name: "email", label: "Email", type: "email", autocomplete: "email", required: true },
+  { name: "company", label: "Company or project", type: "text", autocomplete: "organization", required: false },
+  { name: "message", label: "What are you building?", multiline: true, required: true, placeholder: "The idea, where it's at, and what you need." },
 ]
 
-const expectations = [
-  "Free initial consultation to understand your needs",
-  "Honest assessment of project feasibility",
-  "Customized solution roadmap with clear milestones",
-  "Transparent pricing with no hidden costs",
-]
+const state = ref("idle")
 
-const handleSubmit = (event) => {
-  const myForm = event.target
-  const formData = new FormData(myForm)
+const track = (name) => {
+  if (typeof window.gtag === "function") window.gtag("event", name, { event_category: "contact", value: 1 })
+}
 
-  fetch("/post-form.html", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then((r) => {
-      if (r.ok) {
-        document.getElementById("contact-form").classList.add("hidden")
-        document.getElementById("contact-form-heading").classList.add("hidden")
-        document
-          .getElementById("contact-form-success")
-          .classList.remove("hidden")
-        // google analytics form submission
-        window.gtag("event", "submit_lead_form", {
-          event_category: "contact",
-          event_label: "manual_event_SUBMIT_LEAD_FORM",
-          value: 1,
-        })
-      } else {
-        document.getElementById("contact-form").classList.add("hidden")
-        document.getElementById("contact-form-heading").classList.add("hidden")
-        document.getElementById("contact-form-error").classList.remove("hidden")
-        // google analytics form submission error
-        window.gtag("event", "submit_lead_form_error", {
-          event_category: "contact",
-          event_label: "manual_event_SUBMIT_LEAD_FORM_ERROR",
-          value: 1,
-        })
-      }
+const submit = async (event) => {
+  state.value = "sending"
+  try {
+    const response = await fetch("/post-form.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(event.target)).toString(),
     })
-    .catch((error) => alert(error))
+    if (!response.ok) throw new Error(`Form post failed: ${response.status}`)
+    state.value = "sent"
+    track("submit_lead_form")
+  } catch {
+    state.value = "error"
+    track("submit_lead_form_error")
+  }
 }
 </script>

@@ -37,5 +37,18 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@nuxt/image",
   ],
+  googleFonts: {
+    families: {
+      "Space Grotesk": [500, 700],
+      "IBM Plex Sans": [400, 500, 600],
+      "IBM Plex Mono": [400, 500],
+    },
+    display: "swap",
+  },
+  // The old standalone pages now live as sections on the home page
+  routeRules: {
+    "/about": { redirect: "/#about" },
+    "/contact": { redirect: "/#contact" },
+  },
   compatibilityDate: "2024-12-18",
 })
