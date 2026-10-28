@@ -1,54 +1,32 @@
-# Nuxt Starter
+# alternativereality.com
 
-![Netlify + Nuxt Starter Preview](nuxt-starter-preview.jpg)
+The website for [Alternative Reality Group](https://alternativereality.com), a software company in Los Angeles that builds and runs its own products.
 
----
+Built with [Nuxt 3](https://nuxt.com/) and [Tailwind CSS](https://tailwindcss.com/), generated as a static site and hosted on [Netlify](https://www.netlify.com/).
 
-Nuxt Starter is a minimal template designed for creating quick landing pages, built with Nuxt and Tailwind CSS, and powered by Nuxt Content.
+## Running it locally
 
-**View demo:** [https://demo-nuxt-starter.netlify.app/](https://demo-nuxt-starter.netlify.app/)
-
-A customizable Nuxt starter using:
-
-- [Nuxt](https://nuxt.com/) v3.x 
-- [Tailwind CSS](https://tailwindcss.com/) v3.x
-- [Nuxt Content](https://content.nuxt.com/) support
-
-## Status
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7ea0bd76-94ed-4f85-8b0d-8764199fe246/deploy-status)](https://app.netlify.com/sites/arg-nuxt/deploys)
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-
-# generate static project
-$ npm run generate
+```sh
+bun install        # or npm install
+bun run dev        # http://localhost:3000
+bun run generate   # static build in dist/
 ```
 
-## Deploy to Netlify
+## Layout
 
-Want to deploy immediately? Click this button
+| Path | What's there |
+| --- | --- |
+| `pages/index.vue` | The home page: hero, products, working with ARG, about, contact |
+| `pages/privacy.vue` | Privacy policy |
+| `components/` | Header, footer, product cards and the contact form |
+| `public/img/products/` | Product screenshots |
+| `public/brand/` | Logo, icon, favicon and share-card files |
+| `brand/` | The script that generates the logo files, and the brand guide ([`brand/README.md`](brand/README.md)) |
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/nuxt-starter)
+## Contact form
 
-Clicking this button will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify.
+The form posts to `/post-form.html`, a hidden static copy of the form that Netlify uses to detect it. If you change the form's fields in `components/ContactSection.vue`, change them in `public/post-form.html` to match, or Netlify will drop them.
 
-## Next Steps
+## Deploying
 
-Here are a few suggestions on what to do next if you're new to Netlify Visual Editor:
-
-- Check [Nuxt on Netlify documentation](https://docs.netlify.com/frameworks/nuxt/).
-- Check [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-- Check [Nuxt Content](https://content.nuxt.com/get-started/installation)
-
-## Support
-
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+Netlify publishes `dist/`, the output of `nuxt generate` (see `netlify.toml`). Production deploys from `main`, and other branches get preview deploys when branch deploys are turned on.
