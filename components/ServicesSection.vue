@@ -6,8 +6,8 @@
           What I do
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Engagements are usually scoped around AI strategy, custom software,
-          or hands-on system design for entertainment and media teams.
+          Engagements around AI strategy, custom software, training, and
+          hands-on get-to-market work—mostly for founders and operators.
         </p>
       </div>
 
@@ -54,7 +54,7 @@ const services = [
     icon: "lucide:map",
     title: "AI Strategy",
     description:
-      "Practical AI roadmaps for entertainment teams who know AI matters but aren't sure where to start.",
+      "Practical AI roadmaps for founders and operators who know AI matters but aren't sure where to start.",
     iconBg: "bg-blue-600",
     features: [
       "Readiness assessment",
@@ -66,7 +66,7 @@ const services = [
     icon: "lucide:code",
     title: "Custom Software & AI Systems",
     description:
-      "Production software, AI-assisted tooling, and API integrations built for real media workflows.",
+      "Production software, AI-assisted tooling, and integrations built for real workflows.",
     iconBg: "bg-green-600",
     features: [
       "AI-powered applications",
@@ -75,22 +75,22 @@ const services = [
     ],
   },
   {
-    icon: "lucide:workflow",
-    title: "Production & Workflow Design",
+    icon: "lucide:rocket",
+    title: "Get-to-Market Advisory",
     description:
-      "Automation and operational improvements for content creation, post, and distribution workflows.",
+      "Direct support for taking a product from prototype to real usage and revenue.",
     iconBg: "bg-purple-600",
     features: [
-      "Process automation",
-      "Workflow optimization",
-      "Change management support",
+      "Launch planning",
+      "Growth loops and feedback",
+      "Operational readiness",
     ],
   },
   {
     icon: "lucide:bar-chart-3",
     title: "Analytics & Insights",
     description:
-      "Data systems that turn messy content and audience data into actionable insight.",
+      "Data systems that turn messy operational and audience data into actionable insight.",
     iconBg: "bg-orange-600",
     features: [
       "Predictive analytics",

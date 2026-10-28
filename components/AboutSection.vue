@@ -4,18 +4,23 @@
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="order-2 lg:order-1">
           <h2 class="text-4xl font-bold text-gray-900 mb-6">
-            Built from production experience, not just coursework
+            Built from shipped product, not just strategy advice
           </h2>
           <p class="text-lg text-gray-700 mb-6">
             Alternative Reality Group is led by a founder with deep roots in
             technology, entertainment, and artificial intelligence—spanning
             product development, engineering leadership, and applied AI.
           </p>
+          <p class="text-lg text-gray-700 mb-6">
+            Recent work includes launching TravelCareMexico.com, a travel
+            platform built from idea to production. That kind of hands-on
+            execution is what ARG brings to AI and software engagements: the
+            ability to move from recommendation to working system.
+          </p>
           <p class="text-lg text-gray-700 mb-8">
-            Rather than generic strategy advice, ARG brings hands-on experience
-            building software and AI systems inside real entertainment workflows.
-            That means recommendations are grounded in what can actually ship,
-            not just what reads well in a deck.
+            Entertainment remains a core domain—content, metadata, production
+            tooling, and distribution—but the underlying offer is the same for
+            any operator trying to ship faster.
           </p>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">

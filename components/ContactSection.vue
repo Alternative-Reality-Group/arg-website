@@ -8,8 +8,9 @@
           </h2>
           <p class="text-xl text-gray-300 mb-8">
             Tell me what you're trying to build or where you're stuck. I'll give
-            you a direct read on whether it's a fit, and what the next step
-            should be.
+            you a direct read on whether it's a fit, and whether standard
+            consulting, training, or a revenue-participation model makes more
+            sense.
           </p>
 
           <div class="space-y-6">
@@ -103,7 +104,7 @@
 
             <div>
               <label for="company" class="block text-sm font-medium mb-2"
-                >Company</label
+                >Company / Project</label
               >
               <input
                 v-model="form.company"
@@ -111,8 +112,24 @@
                 id="company"
                 name="company"
                 class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500"
-                placeholder="Your company"
-                required />
+                placeholder="Company or project name" />
+            </div>
+
+            <div>
+              <label for="engagement" class="block text-sm font-medium mb-2"
+                >Preferred engagement type</label
+              >
+              <select
+                v-model="form.engagement"
+                id="engagement"
+                name="engagement"
+                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500">
+                <option value="" disabled>Select one</option>
+                <option>Standard consulting</option>
+                <option>1:1 training</option>
+                <option>Revenue participation</option>
+                <option>Not sure yet</option>
+              </select>
             </div>
 
             <div>
@@ -146,6 +163,7 @@ const form = ref({
   name: "",
   email: "",
   company: "",
+  engagement: "",
   message: "",
 })
 

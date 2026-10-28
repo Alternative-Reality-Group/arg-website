@@ -16,12 +16,13 @@
         </p>
         <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
           AI and software strategy for
-          <span class="text-blue-400">entertainment</span> operators.
+          <span class="text-blue-400">founders and operators</span>.
         </h1>
         <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
-          I help studios, networks, and media teams move from AI curiosity to
-          production-ready systems—focused on content, metadata, production
-          workflows, and distribution.
+          I work with founders and operators who need to move from AI curiosity
+          to production-ready systems—and from prototype to real revenue. Recent
+          work includes travel and entertainment, but the pattern is the same:
+          idea to shipping product.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <button

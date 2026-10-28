@@ -28,7 +28,7 @@ const scrollToSection = (sectionId) => {
   const sectionMap = {
     'founder': 'founder',
     'what i do': 'services',
-    'where i focus': 'industries',
+    'engagements': 'industries',
     'current work': 'current-work',
     'contact': 'contact',
   }

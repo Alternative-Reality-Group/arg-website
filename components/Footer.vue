@@ -7,7 +7,7 @@
         </div>
         <p class="text-sm">
           Copyright &copy; {{ new Date().getFullYear() }} Alternative Reality
-          Group. | Transforming businesses through AI innovation.
+          Group. All rights reserved.
         </p>
       </div>
     </div>

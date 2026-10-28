@@ -73,5 +73,5 @@ defineProps({
 
 defineEmits(["toggle-menu", "scroll-to-section"])
 
-const navItems = ["Founder", "What I Do", "Where I Focus", "Current Work", "Contact"]
+const navItems = ["Founder", "What I Do", "Engagements", "Current Work", "Contact"]
 </script>
