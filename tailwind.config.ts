@@ -13,14 +13,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        display: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
+        mono: ["IBM Plex Mono", ...defaultTheme.fontFamily.mono],
       },
+      // Brand palette, taken from the //ARG. logo
       colors: {
-        'primary': 'var(--primary-color)',
-        'secondary': 'var(--secondary-color)',
-        'accent': 'var(--accent-color)',
-        'neutral-light': 'var(--neutral-light)',
-        'neutral-dark': 'var(--neutral-dark)',
+        ink: "#12101C",
+        paper: "#F4F2ED",
+        night: "#0B0F14",
+        violet: { DEFAULT: "#7C5CFF", dim: "#5B47B8", light: "#B9A8FF" },
+        muted: { DEFAULT: "#5C5866", dark: "#A6A2B2" },
+        line: { DEFAULT: "#E2DED6", dark: "#262A33" },
       },
     },
   },
