@@ -75,8 +75,10 @@ const fields = [
 
 const state = ref("idle")
 
+// Same event names and parameters as the previous site, so existing GA reports keep working.
 const track = (name) => {
-  if (typeof window.gtag === "function") window.gtag("event", name, { event_category: "contact", value: 1 })
+  if (typeof window.gtag === "function")
+    window.gtag("event", name, { event_category: "contact", event_label: `manual_event_${name.toUpperCase()}`, value: 1 })
 }
 
 const submit = async (event) => {
