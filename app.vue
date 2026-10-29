@@ -1,26 +1,29 @@
 <script setup>
+const title = "Alternative Reality Group: AI and software strategy for founders and operators"
+const description =
+  "Alternative Reality Group helps founders and operators move from AI curiosity to production-ready systems, and from prototype to real revenue. AI strategy, custom software, training and go-to-market support, based in Los Angeles."
+
 useHead({
   htmlAttrs: { lang: "en-US" },
-  title: "Alternative Reality Group",
   link: [{ rel: "icon", href: "/favicon.svg" }],
-  meta: [
-    {
-      name: "Alternative Reality Group",
-      content:
-        "Alternative Reality Group provides product and digital transformation consulting services to clients primarily in the entertainment industry.  Certified ServiceNow professional services provided.",
-    },
-  ],
 })
 
 useSeoMeta({
-  title: "Alternative Reality Group",
-  description:
-    "Alternative Reality Group provides product and digital transformation consulting services to clients primarily in the entertainment industry.  Certified ServiceNow professional services provided.",
-  ogDescription:
-    "Alternative Reality Group provides product and digital transformation consulting services to clients primarily in the entertainment industry.  Certified ServiceNow professional services provided.",
-  ogTitle: "Alternative Reality Group",
-  ogImage: "https://alternativereality.com/img/preview.svg",
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: "website",
+  ogUrl: "https://alternativereality.com/",
+  ogSiteName: "Alternative Reality Group",
+  ogImage: "https://alternativereality.com/img/og-image.jpg",
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: "AI and software strategy for founders and operators",
   twitterCard: "summary_large_image",
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: "https://alternativereality.com/img/og-image.jpg",
 })
 </script>
 
