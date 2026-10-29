@@ -17,6 +17,7 @@ const squares = [
   ["arg-favicon-48.png", "arg-icon-dark-small.svg", 48],
   ["arg-favicon-32.png", "arg-icon-dark-small.svg", 32],
   ["arg-favicon-16.png", "arg-favicon.svg", 16],
+  ["arg-linkedin-logo-400.png", "arg-icon-square.svg", 400],
 ]
 const logos = [
   ["arg-logo-light-1200.png", "arg-logo-light.svg", 1200],
@@ -44,5 +45,11 @@ const logos = [
   await page.setContent(`<style>html,body{margin:0}body{width:1200px;height:630px;background:#0B0F14;display:flex;align-items:center;justify-content:center}svg{width:720px;height:auto}</style>${svg("arg-logo-white.svg")}`)
   await page.screenshot({ path: path.join(brand, "og-image.png") })
   console.log("wrote og-image.png")
+
+  // LinkedIn cover: logo on the right, since the page's profile logo covers the bottom-left
+  await page.setViewportSize({ width: 1128, height: 191 })
+  await page.setContent(`<style>html,body{margin:0}body{width:1128px;height:191px;background:#0B0F14;display:flex;align-items:center;justify-content:flex-end;padding-right:64px;box-sizing:border-box}svg{height:120px;width:auto}</style>${svg("arg-logo-white.svg")}`)
+  await page.screenshot({ path: path.join(brand, "arg-linkedin-cover-1128x191.png") })
+  console.log("wrote arg-linkedin-cover-1128x191.png")
   await browser.close()
 })()

@@ -15,6 +15,7 @@ Built files live in `public/brand/` and are served at `https://alternativerealit
 | Small icon (around 32px) | `arg-icon-dark-small.svg` (5 scan lines) |
 | Favicon | `/favicon.svg` (4 scan lines), `/favicon.ico` (16/32/48), `/apple-touch-icon.png` |
 | Social share card | `og-image.png` (1200×630) |
+| LinkedIn company page | `arg-linkedin-logo-400.png` (square corners; LinkedIn applies its own mask), `arg-linkedin-cover-1128x191.png` |
 | Decorative mark | `arg-mark-light.svg`, `arg-mark-dark.svg` (the slashes, no tile) |
 
 Colours: violet `#7C5CFF`, lavender `#B9A8FF` (scan slash on light), dim violet `#5B47B8` (scan slash

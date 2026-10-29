@@ -155,6 +155,8 @@ FILES = {
     "arg-icon-dark-small.svg": icon(True, 5),
     "arg-icon-light-small.svg": icon(False, 5),
     "arg-favicon.svg": icon(True, 4, fill=40, radius=8),
+    # Square corners, for platforms that apply their own mask (LinkedIn, social avatars)
+    "arg-icon-square.svg": icon(True, 8, fill=30, radius=0),
     # The slashes alone, for large decorative use
     "arg-mark-light.svg": mark(False),
     "arg-mark-dark.svg": mark(True),
