@@ -215,7 +215,7 @@ const models = [
 
 const products = [
   {
-    name: "kidscancode",
+    name: "Kids Can Build",
     status: "Live · beta",
     live: true,
     summary: "A computer science course for children aged 8 to 10 that teaches how computers work, with real Python along the way.",
@@ -224,8 +224,8 @@ const products = [
       "Built for privacy: children sign in with a first name only, with no email, chat or ads",
       "Free during beta",
     ],
-    url: "https://kidscancode.net",
-    image: "/img/products/kidscancode.webp",
+    url: "https://kidscanbuild.com",
+    image: "/img/products/kidscanbuild.webp",
   },
   {
     name: "Bloginator",
