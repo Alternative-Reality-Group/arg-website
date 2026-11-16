@@ -215,19 +215,6 @@ const models = [
 
 const products = [
   {
-    name: "Kids Can Build",
-    status: "Live · beta",
-    live: true,
-    summary: "A computer science course for children aged 8 to 10 that teaches how computers work, with real Python along the way.",
-    facts: [
-      "144 lessons covering binary, memory, algorithms, the internet and AI",
-      "Built for privacy: children sign in with a first name only, with no email, chat or ads",
-      "Free during beta",
-    ],
-    url: "https://kidscanbuild.com",
-    image: "/img/products/kidscanbuild.webp",
-  },
-  {
     name: "Bloginator",
     status: "Live",
     live: true,
@@ -239,6 +226,19 @@ const products = [
     ],
     url: "https://thebloginator.com",
     image: "/img/products/bloginator.webp",
+  },
+  {
+    name: "Kids Can Build",
+    status: "Live · beta",
+    live: true,
+    summary: "A computer science course for children aged 8 to 10 that teaches how computers work, with real Python along the way.",
+    facts: [
+      "144 lessons covering binary, memory, algorithms, the internet and AI",
+      "Built for privacy: children sign in with a first name only, with no email, chat or ads",
+      "Free during beta",
+    ],
+    url: "https://kidscanbuild.com",
+    image: "/img/products/kidscanbuild.webp",
   },
 ]
 
