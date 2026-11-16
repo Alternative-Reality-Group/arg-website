@@ -250,6 +250,7 @@ const upcoming = [
       "An iPhone app for job seekers. It saves postings, fills in applications and reads the user's inbox, read-only, to keep every application's status current.",
     image: "/img/products/obosuru.webp",
     imageAlt: "The Obosuru coming-soon page",
+    url: "https://obosuru.com",
   },
   {
     name: "R U Interested",
@@ -261,8 +262,8 @@ const upcoming = [
   },
   {
     name: "Hollywood Studio Simulator",
-    status: "Working title · desktop game",
-    summary: "A film studio management game for desktop. Players develop, cast, shoot and release films and compete for the weekend box office.",
+    status: "Working title · mobile/desktop game",
+    summary: "A film studio management game for mobile and desktop. Players develop, cast, shoot and release films and compete for the weekend box office.",
     image: "/img/products/studio-game.webp",
     imageAlt: "The game's main menu, with five generated film posters",
   },
